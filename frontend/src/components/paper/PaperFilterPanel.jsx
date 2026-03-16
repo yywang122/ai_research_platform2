@@ -4,7 +4,7 @@ export default function PaperFilterPanel({ filters, onChange, onSubmit }) {
   return (
     <Box component="form" onSubmit={onSubmit} sx={{ mb: 2 }}>
       <Grid container spacing={2}>
-        <Grid size={{ xs: 12, md: 4 }}>
+        <Grid item xs={12} md={4}>
           <TextField
             fullWidth
             label="關鍵字"
@@ -12,7 +12,7 @@ export default function PaperFilterPanel({ filters, onChange, onSubmit }) {
             onChange={(e) => onChange('q', e.target.value)}
           />
         </Grid>
-        <Grid size={{ xs: 12, md: 2 }}>
+        <Grid item xs={12} md={2}>
           <TextField
             fullWidth
             label="年份"
@@ -20,7 +20,7 @@ export default function PaperFilterPanel({ filters, onChange, onSubmit }) {
             onChange={(e) => onChange('year', e.target.value)}
           />
         </Grid>
-        <Grid size={{ xs: 12, md: 3 }}>
+        <Grid item xs={12} md={3}>
           <TextField
             fullWidth
             label="領域"
@@ -28,7 +28,7 @@ export default function PaperFilterPanel({ filters, onChange, onSubmit }) {
             onChange={(e) => onChange('domain', e.target.value)}
           />
         </Grid>
-        <Grid size={{ xs: 12, md: 3 }}>
+        <Grid item xs={12} md={3}>
           <TextField
             fullWidth
             label="會議"
@@ -43,4 +43,3 @@ export default function PaperFilterPanel({ filters, onChange, onSubmit }) {
     </Box>
   )
 }
-
